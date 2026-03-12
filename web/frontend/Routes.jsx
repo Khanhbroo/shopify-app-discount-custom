@@ -20,7 +20,8 @@ export default function Routes({ pages }) {
     <Route key={path} path={path} element={<Component />} />
   ));
 
-  const NotFound = routes.find(({ path }) => path === "/notFound").component;
+  const NotFound =
+    routes.find(({ path }) => path === "/not-found")?.component || null;
 
   return (
     <ReactRouterRoutes>
